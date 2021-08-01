@@ -190,6 +190,7 @@
 			<Constant>Константа1</Constant>
 			<Catalog>ОбменПоHTTP</Catalog>
 			<Catalog>Справочник1</Catalog>
+			<Catalog>Справочник2</Catalog>
 			<DataProcessor>ПроверкаCOM</DataProcessor>
 			<DataProcessor>ПроверкаHTTP</DataProcessor>
 		</ChildObjects>
