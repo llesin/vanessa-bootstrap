@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Тест COM соединения</v8:content>
+		</v8:item>
+	</Title>
+	<Width>350</Width>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="131">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="140"/>
+			<ChildItems>
+				<Button name="кнПроверкаКомСоединения" id="24">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПроверкаКомСоединения</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверить подключение</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="кнПроверкаКомСоединенияРасширеннаяПодсказка" id="141"/>
+				</Button>
+				<CheckBoxField name="ВключатьПроверкуНаКлиенте" id="29">
+					<DataPath>ВключатьПроверкуНаКлиенте</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На клиенте</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВключатьПроверкуНаКлиентеКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ВключатьПроверкуНаКлиентеРасширеннаяПодсказка" id="142"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПоказатьПароль" id="162">
+					<DataPath>ПоказатьПароль</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоказатьПарольКонтекстноеМеню" id="163"/>
+					<ExtendedTooltip name="ПоказатьПарольРасширеннаяПодсказка" id="164"/>
+					<Events>
+						<Event name="OnChange">ПоказатьПарольПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СписокБаз" id="91">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>СписокБаз</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокБазКонтекстноеМеню" id="92"/>
+			<AutoCommandBar name="СписокБазКоманднаяПанель" id="93">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокБазРасширеннаяПодсказка" id="143"/>
+			<SearchStringAddition name="СписокБазСтрокаПоиска" id="144">
+				<AdditionSource>
+					<Item>СписокБаз</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокБазСтрокаПоискаКонтекстноеМеню" id="145"/>
+				<ExtendedTooltip name="СписокБазСтрокаПоискаРасширеннаяПодсказка" id="146"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокБазСостояниеПросмотра" id="147">
+				<AdditionSource>
+					<Item>СписокБаз</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокБазСостояниеПросмотраКонтекстноеМеню" id="148"/>
+				<ExtendedTooltip name="СписокБазСостояниеПросмотраРасширеннаяПодсказка" id="149"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокБазУправлениеПоиском" id="150">
+				<AdditionSource>
+					<Item>СписокБаз</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокБазУправлениеПоискомКонтекстноеМеню" id="151"/>
+				<ExtendedTooltip name="СписокБазУправлениеПоискомРасширеннаяПодсказка" id="152"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnEditEnd">СписокБазПриОкончанииРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="СписокБазФлаг" id="125">
+					<DataPath>СписокБаз.Флаг</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокБазФлагКонтекстноеМеню" id="126"/>
+					<ExtendedTooltip name="СписокБазФлагРасширеннаяПодсказка" id="153"/>
+				</CheckBoxField>
+				<InputField name="СписокБазИмя" id="122">
+					<DataPath>СписокБаз.Имя</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокБазИмяКонтекстноеМеню" id="123"/>
+					<ExtendedTooltip name="СписокБазИмяРасширеннаяПодсказка" id="154"/>
+				</InputField>
+				<InputField name="СписокБазСервер" id="104">
+					<DataPath>СписокБаз.Сервер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокБазСерверКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="СписокБазСерверРасширеннаяПодсказка" id="155"/>
+				</InputField>
+				<InputField name="СписокБазБаза" id="107">
+					<DataPath>СписокБаз.База</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокБазБазаКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="СписокБазБазаРасширеннаяПодсказка" id="156"/>
+				</InputField>
+				<InputField name="СписокБазПользователь" id="110">
+					<DataPath>СписокБаз.Пользователь</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокБазПользовательКонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="СписокБазПользовательРасширеннаяПодсказка" id="157"/>
+				</InputField>
+				<InputField name="СписокБазПароль" id="113">
+					<DataPath>СписокБаз.Пароль</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокБазПарольКонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="СписокБазПарольРасширеннаяПодсказка" id="158"/>
+				</InputField>
+				<CheckBoxField name="СписокБазЭтоV82" id="116">
+					<DataPath>СписокБаз.ЭтоV82</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокБазЭтоV82КонтекстноеМеню" id="117"/>
+					<ExtendedTooltip name="СписокБазЭтоV82РасширеннаяПодсказка" id="159"/>
+				</CheckBoxField>
+				<InputField name="СписокБазПуть" id="128">
+					<DataPath>СписокБаз.Путь</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокБазПутьКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="СписокБазПутьРасширеннаяПодсказка" id="160"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<TextDocumentField name="ТекстовоеПоле" id="25">
+			<DataPath>ТекстовоеПоле</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат тестирования</v8:content>
+				</v8:item>
+			</Title>
+			<Width>150</Width>
+			<ContextMenu name="ТекстовоеПолеКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ТекстовоеПолеРасширеннаяПодсказка" id="161"/>
+		</TextDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПроверкаCOM</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Соединение_ЗУП_Сотекс" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЗУП 3.1 Сотекс (Srvr=sot-1C83-srv02;Ref=hrm30_sotex;)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Соединение_ЗУП_ФКНТ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЗУП 3.0 ФКНТ (Srvr=sot-1c83-srv02;Ref=hrm30_fknt;)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Соединение_УПП_Анвилаб" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УПП Анвилаб (Srvr=sot-1c83-srv03;Ref=anvilab;)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Соединение_ЭДОР" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЭДОР (Srvr=sot-1c82-srv01;Ref=edor;) ; 1С 8.2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстовоеПоле" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текстовое поле</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Соединение_УПП_Сотекс" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УПП Сотекс (Srvr=sot-1c83-srv03;Ref=sotex2015;)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВключатьПроверкуНаКлиенте" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включать проверку на клиенте</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СозданиеПодключениякЭксель" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создание подключенияк эксель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СозданиеПодключениякВорд" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создание подключенияк эксель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Соединение_БП30_ФКНТ" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>БП ФКНТ (Srvr="app1cv83sot1";Ref="fknt30";)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Объект82" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект 8.2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Объект83" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект 8.3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Соединение_ЗУП_Рафарма" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЗУП Рафарма (Srvr=sot-1c83-srv02;Ref=hrm31_rafarma;)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Соединение_УПП_Рафарма" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УПП Рафарма (Srvr=srv-1c1;Ref=Farm;)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокБаз" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список баз</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Сервер" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сервер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="База" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>База</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пользователь" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пароль" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пароль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоV82" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это v82</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Путь" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Имя" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Флаг" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Флаг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПоказатьПароль" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверкаКомСоединения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка ком соединения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка ком соединения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаКомСоединения</Action>
+		</Command>
+		<Command name="ПроверкаРаботыСОбъектами" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка работы с объектами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка работы с объектами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаРаботыСОбъектами</Action>
+		</Command>
+		<Command name="ПроверкаСозданияСОМОбъектов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка создания СОМОбъектов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка создания СОМОбъектов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаСозданияСОМОбъектов</Action>
+		</Command>
+	</Commands>
+</Form>
