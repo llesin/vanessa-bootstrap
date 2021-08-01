@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 			<xr:ContainedObject>
 				<xr:ClassId>fb282519-d103-4dd3-bc12-cb271d631dfc</xr:ClassId>
-				<xr:ObjectId>1b695554-6470-4f7d-8237-409492b6c1c2</xr:ObjectId>
+				<xr:ObjectId>69f0ce11-687f-4c07-8c8c-fdaeb9747360</xr:ObjectId>
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
@@ -187,6 +187,7 @@
 			<Subsystem>Справочники</Subsystem>
 			<Role>ПолныеПрава</Role>
 			<CommonModule>лл_КоннекторHTTP</CommonModule>
+			<Constant>Константа1</Constant>
 			<Catalog>ОбменПоHTTP</Catalog>
 			<DataProcessor>ПроверкаCOM</DataProcessor>
 			<DataProcessor>ПроверкаHTTP</DataProcessor>
